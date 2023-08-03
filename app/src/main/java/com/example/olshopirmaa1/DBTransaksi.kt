@@ -1,0 +1,110 @@
+package com.example.olshopirmaa1
+
+import android.content.ContentValues
+import android.content.Context
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
+import java.util.*
+
+class DBTransaksi(context: Context, factory: SQLiteDatabase.CursorFactory?) :
+    SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION) {
+
+    // below is the method for creating a database by a sqlite query
+    override fun onCreate(db: SQLiteDatabase) {
+        // below is a sqlite query, where column names
+        // along with their data types is given
+        val query = ("CREATE TABLE " + TABLE_MENU + " ("
+                + ID_COL + " INTEGER PRIMARY KEY, " +
+                TANGGAL_COl + " TEXT," +
+                JAM_COl + " TEXT," +
+                KODE_COl + " TEXT," +
+                MAKANAN_COL + " TEXT," +
+                PRICE_COL + " TEXT" + ")")
+
+        // we are calling sqlite
+        // method for executing our query
+        db.execSQL(query)
+    }
+
+    override fun onUpgrade(db: SQLiteDatabase, p1: Int, p2: Int) {
+        // this method is to check if table already exists
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_MENU)
+        onCreate(db)
+    }
+
+    // This method is for adding data in our database
+    fun addName(tanggal: String, jam: String, kode: String, makanan: String, price: String){
+
+        // below we are creating
+        // a content values variable
+        val values = ContentValues()
+
+        // we are inserting our values
+        // in the form of key-value pair
+        values.put(TANGGAL_COl, tanggal)
+        values.put(JAM_COl, jam)
+        values.put(KODE_COl, kode)
+        values.put(MAKANAN_COL, makanan)
+        values.put(PRICE_COL, price)
+
+        // here we are creating a
+        // writable variable of
+        // our database as we want to
+        // insert value in our database
+        val db = this.writableDatabase
+
+        // all values are inserted into database
+        db.insert(TABLE_MENU, null, values)
+
+        // at last we are
+        // closing our database
+        db.close()
+    }
+
+    // below method is to get
+    // all data from our database
+    fun getName(): Cursor? {
+
+        // here we are creating a readable
+        // variable of our database
+        // as we want to read value from it
+        val db = this.readableDatabase
+
+        // below code returns a cursor to
+        // read data from the database
+        return db.rawQuery("SELECT * FROM " + TABLE_MENU, null)
+
+    }
+
+    companion object{
+        // here we have defined variables for our database
+
+        // below is variable for database name
+        private val DATABASE_NAME = "Menu"
+
+        // below is the variable for database version
+        private val DATABASE_VERSION = 1
+
+        // below is the variable for table name
+        val TABLE_MENU = "menu"
+
+        // below is the variable for id column
+        val ID_COL = "id"
+
+        // below is the variable for id column
+        val TANGGAL_COl = "tanggal"
+
+        // below is the variable for id column
+        val JAM_COl = "jam"
+
+        // below is the variable for name column
+        val KODE_COl = "kode"
+
+        // below is the variable for age column
+        val MAKANAN_COL = "makan"
+
+        // below is the variable for age column
+        val PRICE_COL = "price"
+    }
+}

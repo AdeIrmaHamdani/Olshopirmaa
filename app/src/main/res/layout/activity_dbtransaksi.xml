@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Edit text to enter age -->
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true">
+
+        <!-- Text view to get all ages -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <EditText
+                android:id="@+id/enterDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:hint="Tanggal"
+                android:inputType="date"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/enterJam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:hint="Jam"
+                android:inputType="date"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/enterKode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:hint="Kode Makanan"
+                android:inputType="text"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/enterMakan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:hint="Nomor Meja"
+                android:inputType="number"
+                android:textSize="22sp"
+                tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
+
+            <EditText
+                android:id="@+id/enterPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10sp"
+                android:hint="Price"
+                android:inputType="number"
+                android:textSize="22sp" />
+
+            <!-- Button to add Name -->
+            <Button
+                android:id="@+id/addName"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:background="@color/colorPrimary"
+                android:text="TAMBAH PESANAN"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                tools:ignore="TextContrastCheck" />
+
+            <!-- Button to print Name -->
+            <Button
+                android:id="@+id/printName"
+                android:layout_width="150sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
+                android:background="@color/colorPrimary"
+                android:text="CETAK PESANAN"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                tools:ignore="TextContrastCheck" />
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:id="@+id/Tanggal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:padding="10sp"
+                        android:text="Tanggal\n\n"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/Waktu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:padding="9sp"
+                        android:text="Jam\n\n"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+
+                    <!-- Text view to get all name -->
+
+                    <!-- Text view to get all ages -->
+
+                    <TextView
+                        android:id="@+id/Kode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:padding="9sp"
+                        android:text="Kode Makanan\n\n"
+                        android:textColor="#000000"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:id="@+id/Makan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:padding="8sp"
+                        android:text="No.Meja\n\n"
+                        android:textColor="#000000"
+                        android:textSize="9sp" />
+
+                    <TextView
+                        android:id="@+id/Price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:layout_weight="1"
+                        android:padding="10sp"
+                        android:text="Price\n\n"
+                        android:textColor="#000000"
+                        android:textSize="10sp" />
+
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

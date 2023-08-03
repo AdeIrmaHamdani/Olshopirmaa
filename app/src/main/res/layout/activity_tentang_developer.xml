@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="256dp"
+        android:layout_height="174dp"
+        android:layout_above="@+id/biography"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="45dp"
+        app:srcCompat="@drawable/foto_develope"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <TextView
+        android:id="@+id/biography"
+        android:layout_width="match_parent"
+        android:layout_height="484dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:background="#F3EDED"
+        android:text="Hello ! \nMy Name Ade Irma Hamdani, Saya merupakan lulusan smk jurusan Teknik Komputer dan Jaringan. Saya mempunyai hobi Berenang, Beladiri, dan Mendengarkan Musik. \nReach me on my social media account: \n    Instagram: irmaade1510 \n    Email: irmaade896@gmail.com"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/buttonPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/biography"
+        android:layout_alignLeft="@id/biography"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="-203dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="call"
+        android:text="Telepon"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:backgroundTint="#DD1717"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/buttonPdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/biography"
+        android:layout_alignRight="@id/biography"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginTop="-204dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="41dp"
+        android:layout_toRightOf="@id/buttonPanel"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:onClick="call"
+        android:text="PDF"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/idTVHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="PDF Generator"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!--on below line we are creating a
+        button to generate a pdf file-->
+    <Button
+        android:id="@+id/idBtnGeneratePdf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:padding="4dp"
+        android:text="Generate PDF"
+        android:textAllCaps="false" />
+
+
+</RelativeLayout>

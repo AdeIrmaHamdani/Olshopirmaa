@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!-- Edit text to enter name -->
+    <EditText
+        android:id="@+id/enterKode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kode"
+        android:textSize="22sp"
+        android:inputType="text"
+        android:layout_margin="20sp"
+        tools:ignore="Autofill" />
+
+    <!-- Edit text to enter age -->
+    <EditText
+        android:id="@+id/enterMakan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:hint="Makanan"
+        android:inputType="text"
+        android:textSize="22sp"
+        tools:ignore="Autofill,DuplicateSpeakableTextCheck" />
+
+    <EditText
+        android:id="@+id/enterPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:textSize="22sp"
+        android:inputType="number"
+        android:hint="Price" />
+
+    <!-- Button to add Name -->
+    <Button
+        android:id="@+id/addName"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:background="@color/colorPrimary"
+        android:text="Add Name"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <!-- Button to print Name -->
+    <Button
+        android:id="@+id/printName"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:background="@color/colorPrimary"
+        android:text="Print Name"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="304dp">
+
+        <!-- Text view to get all name -->
+        <TextView
+            android:id="@+id/Kode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:padding="10sp"
+            android:text="Kode\n\n"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <!-- Text view to get all ages -->
+
+        <TextView
+            android:id="@+id/Makan"
+            android:layout_width="match_parent"
+            android:layout_height="99dp"
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:padding="10sp"
+            android:text="Makanan\n\n"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/Price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_weight="1"
+            android:padding="10sp"
+            android:text="Price\n\n"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            tools:ignore="InvalidId" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
